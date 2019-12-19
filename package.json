@@ -1,6 +1,6 @@
 {
-  "name": "react-native-proximity",
-  "version": "3.0.0",
+  "name": "@grit96/react-native-proximity",
+  "version": "3.0.1",
   "description": "Detect proximity on iOS and Android",
   "main": "index.js",
   "scripts": {
