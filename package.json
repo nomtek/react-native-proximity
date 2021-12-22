@@ -2,7 +2,6 @@
   "name": "react-native-proximity",
   "version": "3.0.2",
   "description": "Detect proximity on iOS and Android",
-  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +23,10 @@
   "homepage": "https://github.com/williambout/react-native-proximity",
   "dependencies": {
     "typescript": "^4.5.4"
-  }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ]
 }
