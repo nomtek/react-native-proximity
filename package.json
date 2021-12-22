@@ -21,12 +21,18 @@
     "url": "https://github.com/williambout/react-native-proximity/issues"
   },
   "homepage": "https://github.com/williambout/react-native-proximity",
-  "dependencies": {
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
     "typescript": "^4.5.4"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "/dist"
+    "/dist",
+    "/android",
+    "/RNProximity",
+    "react-native-proximity.podspec"
   ]
 }

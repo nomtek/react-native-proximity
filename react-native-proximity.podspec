@@ -15,8 +15,7 @@ Pod::Spec.new do |s|
   s.requires_arc   = true
   s.platform       = :ios, '10.0'
   
-  s.preserve_paths = 'README.md', 'package.json', 'index.js'
-  s.source_files   = 'RNProximity/RNProximity/*.{h,m}'
+  s.source_files   = 'RNProximity/**/*.{h,m}'
 
   s.static_framework = true
 
