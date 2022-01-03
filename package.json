@@ -2,7 +2,6 @@
   "name": "react-native-proximity",
   "version": "3.0.2",
   "description": "Detect proximity on iOS and Android",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +20,19 @@
   "bugs": {
     "url": "https://github.com/williambout/react-native-proximity/issues"
   },
-  "homepage": "https://github.com/williambout/react-native-proximity"
+  "homepage": "https://github.com/williambout/react-native-proximity",
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist",
+    "/android",
+    "/RNProximity",
+    "react-native-proximity.podspec"
+  ]
 }
