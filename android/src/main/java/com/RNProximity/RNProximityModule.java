@@ -1,7 +1,6 @@
 
 package com.RNProximity;
 import android.os.PowerManager;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -26,7 +25,7 @@ public class RNProximityModule extends ReactContextBaseJavaModule {
     wakeLock = powerManager.newWakeLock(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK, TAG + ":wakelocktag");
   }
 
-  public void sendEvent(String eventName, @Nullable WritableMap params) {
+  public void sendEvent(String eventName, WritableMap params) {
     if (this.reactContext.hasActiveCatalystInstance()) {
       this.reactContext
               .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
