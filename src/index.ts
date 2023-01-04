@@ -1,4 +1,4 @@
-import { DeviceEventEmitter, NativeModules, Platform } from "react-native";
+import { NativeModules, Platform } from "react-native";
 
 const nativeModule = NativeModules.RNProximity;
 
@@ -6,30 +6,18 @@ let addListener = null;
 let removeListener = null;
 
 if (Platform.OS === "ios") {
-  (addListener = function (callback) {
+  (addListener = function () {
     NativeModules.RNProximity.proximityEnabled(true);
-    return DeviceEventEmitter.addListener("proximityStateDidChange", callback);
   }),
-    (removeListener = function (listener) {
+    (removeListener = function () {
       NativeModules.RNProximity.proximityEnabled(false);
-      DeviceEventEmitter.removeAllListeners(
-        "proximityStateDidChange",
-        listener
-      );
     });
 } else if (Platform.OS == "android") {
-  addListener = (callback) => {
+  addListener = () => {
     nativeModule.addListener();
-    DeviceEventEmitter.addListener(nativeModule.EVENT_ON_SENSOR_CHANGE, (e) =>
-      callback(e)
-    );
   };
-  removeListener = (listener) => {
+  removeListener = () => {
     nativeModule.removeListener();
-    DeviceEventEmitter.removeAllListeners(
-      nativeModule.EVENT_ON_SENSOR_CHANGE,
-      listener
-    );
   };
 }
 
